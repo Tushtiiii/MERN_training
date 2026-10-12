@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./design.css">
+        <style>
+                body { background-color:rgb(174, 174, 217)}
+                /* attribute selector  */
+                /* combinator selector   */
+
+                /* descendent combinator */
+                p b {color:rgb(241, 83, 83)}
+                
+                /* child selector */
+                /* p>b {text-decoration-line:line-through ;} */
+
+                /* adjacent sibling */
+                p+h2{color: antiquewhite;}
+
+                /* general sibling */
+                p~h2 { }
+                /* psedu class  */
+                b:first-child{color: rgb(138, 79, 79);}
+                b:last-child{}
+                a:link{}
+                a:visited{}
+                /*  pseduelements is used to style the part of an element and is denoted vy :: */
+                p::first-letter{font-size: xx-large;}
+                p::first-line{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+                li::marker{color:rgb(179, 28, 17); font-size:xx-large}
+        </style>
+
+    </head>
+    <body>
+        <form action="welcome.html">
+            <pre>
+                <fieldset><legend> for user</legend>
+                User Name : <input type="text" name="name">
+                Password : <input type="password" name="pass">
+                adddress : <textarea name="'add" cols="'20" rows="3"></textarea>
+                Birthdate: <input type="date" name="'dob">
+                Email-id: <input type="email" name="email">
+                </fieldset>
+                <fieldset> <legend> for office use</legend>
+                off time : <input type="time" name="ot">
+                Gender: <input type="radio" name="gender" value="m">Male </input>
+                        <input type="radio" name="gender" value="f">Female </input>
+                Education: <select>
+                    <option name="ug"> ug</option>
+                     <option name="pg"> pg</option>
+                </select>
+                Attachments: <input type="file">
+                </fieldset>
+                Declare : <input type="checkbox"> all the info is correct.
+                <button>register</button> <button>refresh</button>
+                <!--
+                Get method- not secure , pass data through url
+                Post method- secure 
+                Assignment - PERIODIC TABLE IN HTML 
+                ** inline css > internal css >external css
+                 -->
+            </pre>
+        </form>
+        <ol>
+            <li type="1">
+                tushteee
+            </li>
+        </ol>
+        <p> Lorem ipsum dolor sit amet <b>first bold in para</b> consectetur adipisicing elit. Molestias ipsa, libero odio alias aliquam illum incidunt <b>lorem </b> laborum, tempore placeat voluptas pariatur perspiciatis. Repudiandae velit quis recusandae? Sed quis sunt atque!</p>
+    </body>
+</html>

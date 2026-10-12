@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .container{
+            display:flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .box{
+            height: 200px;
+            width: 200px;
+            border: 2px solid;
+            text-align: center;
+            font-size: large;
+        }
+    </style>
+    <script>
+        fs=10
+        function grow(){
+            fs+=5;
+            document.getElementById("p1").style="font-size:"+fs+"px";
+        }
+        it=setInterval(grow, 2000);
+        function stop(){
+            clearInterval(it);
+        }
+        function restart(){
+            it=setInterval(grow, 2000);
+        }
+    </script>
+</head>
+<body>
+
+   <div class="container">
+    <div class="box">box 1</div>
+    <div class="box">box 2</div>
+    <div class="box">box 3</div>
+    <div class="box">box 4</div>
+    <div class="box">box 5</div>
+   </div>
+   <h3 class="text-primary bg-dark"> bootstrap  </h3>
+   <button class="btn-primary btn-xxl " >refresh</button>
+   <p id="p1">Javascript</p>
+   <button class="btn btn-danger" onclick="stop()">stop</button>
+   <button class="btn btn-success" onclick="restart()">restart</button>
+</body>
+</html>

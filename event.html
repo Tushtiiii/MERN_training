@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        const arr = ["green", "red", "blue", "pink", "black", "yellow","white"];
+
+        function change(){
+            const value = document.getElementById("sel").value;
+            document.body.style.backgroundColor = arr[value];
+        }
+        function add(){
+            const value = document.getElementById("txt").value;
+            const para = document.createElement("p");
+            para.innerText = value;
+            document.body.appendChild(para);
+        }
+        function addlist(){
+            const value = document.getElementById("txt1").value;
+            const list = document.getElementById("namelist");
+            const li = document.createElement("li");
+            li.innerText = value;
+
+            btn=document.createElement("button");
+            btn.innerText="delete";
+            btn.onClick=del
+            btn.setAttribute("style", "color:red; font-size:15px; font-family:verdana;");
+            li.appendChild(btn);
+            namelist.appendChild(li);
+            li.setAttribute("style", "color:blue; font-size:20px; font-family:verdana;");
+
+        }
+        function del(){
+            // li.remove();
+            // this.remove();
+            this.parentElement.remove();
+        }
+        function handleteam(){
+            value = document.getElementById("team").value;
+            list = document.getElementById("teamlist");
+            li = document.createElement("li");
+            li.innerText = arr[value];
+            // to handle unique players
+            list.appendChild(li);
+            li.setAttribute("style", "color:pink; font-size:20px; font-family:verdana;");
+        }
+    </script>
+</head>
+<body>
+    select your screen color: <select id="sel" onchange="change()">
+        <option value="">select any color</option>
+        <option value="0">green</option>
+        <option value="1">red</option>
+        <option value="2">blue</option>
+        <option value="3">pink</option>
+        <option value="4">black</option>
+        <option value="5">yellow</option>
+        <option value="6">white</option>
+    </select><br><br>
+    <input type="text" id="txt" placeholder="enter some text"><button onclick="add()">add</button><br><br>
+    <input type="text" id="txt1" placeholder="enter some text"><button onclick="addlist()">add to the list</button>
+    <ol id="namelist"></ol>
+     select your team: <select id="team" onchange="handleteam()">
+        <option value="">select any player</option>
+        <option value="0">virat</option>
+        <option value="1">shubman</option>
+        <option value="2">abhishek</option>
+        <option value="3">bumrah</option>
+        <option value="4">hardik</option>
+        <option value="5">suryakumar</option>
+        <option value="6">rajat</option>
+    </select><br><br>
+    <ol id="teamlist"></ol>
+</body>
+</html>

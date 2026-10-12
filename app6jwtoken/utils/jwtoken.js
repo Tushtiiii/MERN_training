@@ -15,7 +15,6 @@ function verifyToken(token,callback){
         else
             return callback(null,data);
     });  
-
 }
 
 module.exports={generateToken,verifyToken};

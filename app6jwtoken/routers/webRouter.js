@@ -26,7 +26,7 @@ router.post("/login",async(req,res)=>{
     }
     else
             res.json({msg:"Invalid credentials,,,...."});
-    }catch(err){s
+    }catch(err){
         console.log(err);
         res.json("Something is wrong....");
     }

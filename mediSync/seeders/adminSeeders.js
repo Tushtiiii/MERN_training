@@ -1,5 +1,5 @@
 const {User} = require('../models/dbmodels');
-
+const bcrypt = require("bcrypt")
 const seeder= async()=>{
     try{
         const email = "admin@example.com";
@@ -10,7 +10,7 @@ const seeder= async()=>{
         }
     await User.create({
         name:"admin",
-        mobile:"9826026390", 
+        mobile:"7974165722", 
         email,
         password:await bcrypt.hash("admin123",10),
         role:"admin",
